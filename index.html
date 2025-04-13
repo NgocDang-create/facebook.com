@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Facebook – Đăng nhập hoặc đăng ký</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background-color: #f0f2f5;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-box {
+      background-color: white;
+      padding: 20px;
+      width: 100%;
+      max-width: 360px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      border-radius: 8px;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      width: 180px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border: 1px solid #dddfe2;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #1877f2;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    @media (max-width: 400px) {
+      .login-box {
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook logo" class="logo">
+      <input type="text" placeholder="Email hoặc số điện thoại" id="email">
+      <input type="password" placeholder="Mật khẩu" id="password">
+      <button onclick="redirectToWarning()">Đăng nhập</button>
+    </div>
+  </div>
+
+  <script>
+    function redirectToWarning() {
+      window.location.href = "phishing-warning.html";
+    }
+  </script>
+</body>
+</html>
